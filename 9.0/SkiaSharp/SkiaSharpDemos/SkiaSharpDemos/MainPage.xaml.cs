@@ -6,4 +6,10 @@ public partial class MainPage : BasePage
 	{
 		InitializeComponent();
 	}
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        BindingContext = null;
+        BindingContext = this;
+    }
 }
